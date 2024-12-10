@@ -11,13 +11,61 @@
 		<link rel="stylesheet" href="/src/styles/_normazile.css" />
 		<link rel="stylesheet" href="/src/styles/global.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + TS</title>
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+			integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="style.css" />
+		<title>rotating navigation</title>
 	</head>
 	<body>
 
 		<main class="container">
-			<!-- code there -->
+			<div class="circle-container">
+				<div class="circle">
+
+					<button data-button="close"><i class="fas fa-times"></i></button>
+					<button data-button="open"><i class="fas fa-bars"></i></button>
+				</div>
+			</div>
+
+			<div class="content">
+				<h1>Amazing article</h1>
+				<small>Florin Pop</small>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dolor
+					similique laboriosam animi adipisci? Placeat sequi delectus voluptatem
+					repudiandae perferendis ipsa suscipit assumenda odit voluptates at omnis
+					enim reiciendis quae accusantium exercitationem inventore sunt eius ex
+					earum perspiciatis, excepturi natus quidem, est nobis. Quisquam laudantium
+					ullam animi iure itaque rerum sunt vero temporibus? Perferendis rem, porro
+					excepturi quisquam eveniet recusandae possimus officiis a illo non
+					necessitatibus obcaecati dicta facere in aspernatur neque nam laboriosam,
+					culpa doloribus earum temporibus mollitia velit, ducimus debitis. Delectus,
+					nemo! Repudiandae laudantium laboriosam ipsum at nam consequatur obcaecati,
+					exercitationem sapiente nulla libero alias, eveniet ut eos!</p>
+
+				<h3>My Dog</h3>
+				<img
+					src="https://images.unsplash.com/photo-1422565096762-bdb997a56a84?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9nfGVufDB8fDB8fHww"
+					alt="dog">
+				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, alias!
+					Saepe non laudantium, sed repellat odit officia nemo ratione corporis
+					temporibus, pariatur aliquid quibusdam ut! Non nemo alias nesciunt tempora
+					omnis. Dolorum provident excepturi nobis error perferendis deserunt, magnam
+					laudantium dolorem facilis fugit, nulla veniam exercitationem ipsam,
+					obcaecati possimus doloribus minima quia nostrum beatae ab eligendi eum
+					adipisci ratione eveniet! Inventore iure porro enim est, quae, commodi
+					adipisci doloremque velit sed esse eius nobis facere.</p>
+			</div>
 		</main>
+
+		<nav>
+			<ul>
+				<li><i class="fas fa-home"></i>Home</li>
+				<li><i class="fas fa-user-alt"></i>About</li>
+				<li><i class="fas fa-envelope"></i>Contact</li>
+			</ul>
+		</nav>
 
 		<script type="module" src="/src/scripts/main.ts"></script>
 	</body>

@@ -1,5 +1,9 @@
 import { $ } from './_lib';
 
 document.addEventListener('DOMContentLoaded', () => {
-	// code there
+	$('.btn').on('click', () => {
+		$('.search').hasClass('active')
+			? $('.search').removeClass('active')
+			: $('.search').addClass('active');
+	});
 });

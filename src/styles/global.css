@@ -1,4 +1,3 @@
-@import './_container.css';
 @import './_typography.css';
 @import './utils.css';
 @import './_base.css';
@@ -29,11 +28,29 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.debug {
-	border: 2px dashed rgb(72, 205, 72);
-	background-color: rgba(215, 193, 52, 0.242);
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
 }
 
-main {
-	height: 100vh;
+.bg {
+	width: calc(100vw + 60px);
+	height: calc(100vh + 60px);
+	position: absolute;
+	top: -30px;
+	left: -30px;
+	z-index: -1;
+	filter: blur(0px);
+	background: url('https://images.unsplash.com/photo-1732910063342-cb67ba0f2d90?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+}
+
+
+.loading-text {
+	font-size: 120px;
+	color: var(--color-light);
+	font-weight: 800;
 }

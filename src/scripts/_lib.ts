@@ -104,11 +104,11 @@ type Chainable = {
 
 	/**
 	 * Возвращает значение дата-аттрибута.
-	 * @param {attributeKey} attributeKey - ключ искомого дата-аттрибута.
+	 * @param {string} attrKey - ключ искомого дата-аттрибута.
 	 * @returns {Chainable} string
 	 * @example $('.element').getAttribute('id')
 	 */
-	getAttribute: (attributeKey: string) => string | boolean;
+	getAttribute: (attrKey: string) => string | boolean;
 
 	/**
 	 * Проверяет наличие атрибута у выбранных элементов
@@ -206,11 +206,13 @@ export const $ = (this: any, selectorOrElement: string | HTMLElement, parent: Pa
 	} else {
 		elements = [selectorOrElement] as unknown as NodeListOf<HTMLElement>;
 	}
-	if (!elements.length) {
+
+	if (!elements?.length) {
 		console.warn('Element(s) do not exist');
+		return this;
 	}
 
-	const methods: Chainable = {
+	return {
 		on(event: string, callback: (e: Event) => void): Chainable {
 			elements.forEach((el) => el.addEventListener(event, callback));
 			return this;
@@ -332,6 +334,4 @@ export const $ = (this: any, selectorOrElement: string | HTMLElement, parent: Pa
 			return this;
 		},
 	};
-
-	return methods;
 };

@@ -17,13 +17,30 @@
 			crossorigin="anonymous" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Vite + TS</title>
+		<title>Form Wave</title>
 	</head>
 	<body>
 
-		<main class="container">
-			<!-- code there -->
-		</main>
+		<div class="container">
+			<h1>Please login</h1>
+			<form action>
+				<div class="form-control">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" required>
+				</div>
+
+				<div class="form-control">
+					<label for="password">Email</label>
+					<input type="text" name="password" id="password" required>
+				</div>
+
+				<button class="btn">Login</button>
+
+				<p class="text">Don't have an account?
+					<a href="#">Register</a>
+				</p>
+			</form>
+		</div>
 
 		<script type="module" src="/src/scripts/main.ts"></script>
 	</body>

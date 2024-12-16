@@ -1,5 +1,4 @@
 @import './_typography.css';
-@import './utils.css';
 @import './_base.css';
 
 :root {
@@ -27,7 +26,6 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
 	display: flex;

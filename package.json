@@ -32,5 +32,8 @@
 	},
 	"browserslist": [
 		"extends @gravity-ui/browserslist-config"
-	]
+	],
+	"dependencies": {
+		"dom-utils-minimize": "^1.0.7"
+	}
 }

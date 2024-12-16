@@ -1,5 +1,9 @@
 import { $ } from 'dom-utils-minimize';
+
 document.addEventListener('DOMContentLoaded', () => {
-	// eslint-disable-next-line no-console
-	$('.button').on('click', (_e) => console.log('Клик!'));
+	$('.left').on('mouseenter', () => $('.container').addClass('hover-left'));
+	$('.left').on('mouseleave', () => $('.container').removeClass('hover-left'));
+
+	$('.right').on('mouseenter', () => $('.container').addClass('hover-right'));
+	$('.right').on('mouseleave', () => $('.container').removeClass('hover-right'));
 });

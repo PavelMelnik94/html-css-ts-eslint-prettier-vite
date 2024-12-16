@@ -1,5 +1,19 @@
 import { $ } from 'dom-utils-minimize';
+
 document.addEventListener('DOMContentLoaded', () => {
-	// eslint-disable-next-line no-console
-	$('.button').on('click', (_e) => console.log('Клик!'));
+	window.addEventListener('scroll', checkBoxes);
+
+	checkBoxes();
+	function checkBoxes() {
+		const triggerBottom = (window.innerHeight / 5) * 4;
+
+		$('.box')
+			.get()
+			.forEach((box) => {
+				const boxTop = box.getBoundingClientRect().top;
+
+				if (boxTop < triggerBottom) box.classList.add('show');
+				else box.classList.remove('show');
+			});
+	}
 });
